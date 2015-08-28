@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+  h1 Listing of All People
+
+  table(border = '1')
+      thead
+        tr
+          th first_name
+          th last_name
+          th date_of_birth
+
+      tbody
+        each item, i in info.all
+          tr
+            td #{item.first_name}
+            td #{item.last_name}
+            td #{item.date_of_birth}
+
+
